@@ -12,6 +12,12 @@ app.get("/", (req, res)=> {
 })
 
 
+app.post("/", (req, res)=> {
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const email = req.body.email;
+})
+
 app.listen(3000, ()=> {
     console.log("Server is up and running in port 3000!")
 })
