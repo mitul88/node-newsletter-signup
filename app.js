@@ -49,9 +49,9 @@ app.post("/", (req, res)=> {
     const request = https.request(url, options, (response)=> {
 
         if (response.statusCode === 200) {
-            res.send("Succesefully subscribed !");
+            res.sendFile(__dirname + "/success.html");
         } else {
-            res.send("There was an error with siging up, please try again");
+            res.sendFile(__dirname + "/failure.html");
         }
 
         response.on("data", (data)=> {
